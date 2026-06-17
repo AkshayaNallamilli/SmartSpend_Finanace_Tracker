@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monthly Budget | SmartSpend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            💰 SmartSpend
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="budget.html">
+                    <i class="fa-solid fa-calendar"></i>
+                    Monthly Budget
+                </a>
+            </li>
+
+            <li>
+                <a href="transactions.html">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    Transactions
+                </a>
+            </li>
+
+            <li>
+                <a href="savings.html">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                    Savings
+                </a>
+            </li>
+
+            <li>
+    <a href="emergency.html">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Emergency
+    </a>
+</li>
+
+            <li>
+                <a href="tips.html">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Tips
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <div>
+                <h1>Monthly Budget</h1>
+                <p>Manage your monthly spending goals</p>
+            </div>
+
+        </div>
+
+        <!-- BUDGET FORM -->
+
+        <div class="form-card">
+
+            <div class="section-title">
+                Set Budget
+            </div>
+
+            <form id="budgetForm">
+
+                <input
+                type="month"
+                id="budgetMonth"
+                required>
+
+                <input
+                type="number"
+                id="budgetAmountInput"
+                placeholder="Enter Monthly Budget"
+                required>
+
+                <button class="btn">
+                    Save Budget
+                </button>
+
+            </form>
+
+        </div>
+
+        <br>
+
+        <!-- BUDGET SUMMARY -->
+
+        <div class="budget-summary">
+
+            <div class="section-title">
+                Budget Overview
+            </div>
+            <select id="overviewMonth">
+
+    </select>
+
+    <br><br>
+
+            <h2 id="displayBudget">
+                ₹0
+            </h2>
+
+            <p>
+                Current Monthly Budget
+            </p>
+
+            <div class="progress">
+
+                <div
+                class="progress-bar"
+                id="budgetProgressBar">
+                </div>
+
+            </div>
+
+            <h3 id="spentAmount">
+                Spent: ₹0
+            </h3>
+
+            <br>
+
+            <h3 id="remainingAmount">
+                Remaining: ₹0
+            </h3>
+
+        </div>
+
+        <br>
+
+        <!-- SAVED BUDGETS -->
+
+        <div class="table-card">
+
+            <div class="section-title">
+                Budget History
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Month</th>
+                        <th>Budget</th>
+                        <th>Spent</th>
+    <th>Remaining</th>
+    <th>Status</th>
+    <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="budgetTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/budget.js"></script>
+
+</body>
+</html>

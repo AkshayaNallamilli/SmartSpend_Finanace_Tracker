@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Savings | SmartSpend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            💰 SmartSpend
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="budget.html">
+                    <i class="fa-solid fa-calendar"></i>
+                    Monthly Budget
+                </a>
+            </li>
+
+            <li>
+                <a href="transactions.html">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    Transactions
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="savings.html">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                    Savings
+                </a>
+            </li>
+
+            <li>
+    <a href="emergency.html">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Emergency
+    </a>
+</li>
+
+            <li>
+                <a href="tips.html">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Tips
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <div>
+                <h1>Savings Tracker</h1>
+                <p>Track your savings goals professionally</p>
+            </div>
+
+        </div>
+
+        <!-- GOAL FORM -->
+
+        <div class="form-card">
+
+            <div class="section-title">
+                Create Savings Goal
+            </div>
+
+            <form id="goalForm">
+
+                <input
+                type="text"
+                id="goalName"
+                placeholder="Goal Name (Laptop, Bike, Trip)"
+                required>
+
+                <input
+                type="number"
+                id="goalAmount"
+                placeholder="Target Amount"
+                required>
+
+                <button class="btn">
+                    Save Goal
+                </button>
+
+            </form>
+
+        </div>
+
+        <br>
+
+    <!-- MONTH FILTER -->
+
+<div class="form-card">
+
+    <div class="section-title">
+        Filter Savings
+    </div>
+
+    <select id="monthFilter">
+
+        <option value="All">
+            All Months
+        </option>
+
+    </select>
+
+</div>
+
+<br>
+
+<!-- GOALS -->
+
+<div id="goalsContainer">
+
+</div>
+
+        <br>
+
+        <!-- SAVINGS SUMMARY -->
+
+        
+
+    </main>
+
+</div>
+
+<script src="js/savings.js"></script>
+
+</body>
+
+</html>

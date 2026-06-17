@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transactions | SmartSpend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            💰 SmartSpend
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="budget.html">
+                    <i class="fa-solid fa-calendar"></i>
+                    Monthly Budget
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="transactions.html">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    Transactions
+                </a>
+            </li>
+
+            <li>
+                <a href="savings.html">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                    Savings
+                </a>
+            </li>
+
+            <li>
+    <a href="emergency.html">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Emergency
+    </a>
+</li>
+
+            <li>
+                <a href="tips.html">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Tips
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <div>
+
+                <h1>Transactions</h1>
+                <p>Track every rupee professionally</p>
+
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+
+        <div class="form-card">
+
+            <div class="section-title">
+                Add Transaction
+            </div>
+
+            <form id="transactionForm">
+
+                <input
+                type="date"
+                id="date"
+                required>
+
+                <input
+                type="text"
+                id="description"
+                placeholder="Description"
+                required>
+
+                <input
+                type="number"
+                id="amount"
+                placeholder="Amount"
+                required>
+
+                <select id="type" required>
+
+                    <option value="">
+                        Select Type
+                    </option>
+
+                    <option value="Income">
+                        Income
+                    </option>
+
+                    <option value="Expense">
+                        Expense
+                    </option>
+
+                    <option value="Savings">
+                        Savings
+                    </option>
+
+                </select>
+
+                <select id="category" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Salary">
+                        Salary
+                    </option>
+
+                    <option value="Food">
+                        Food
+                    </option>
+
+                    <option value="Shopping">
+                        Shopping
+                    </option>
+
+                    <option value="Travel">
+                        Travel
+                    </option>
+
+                    <option value="Bills">
+                        Bills
+                    </option>
+
+                    <option value="Investment">
+                        Investment
+                    </option>
+
+                    <option value="Entertainment">
+                        Entertainment
+                    </option>
+
+                    <option value="Others">
+                        Others
+                    </option>
+
+                </select>
+
+                <button class="btn">
+                    Add Transaction
+                </button>
+
+            </form>
+
+        </div>
+
+        <br>
+
+        <!-- TABLE -->
+
+        <div class="table-card">
+
+            <div class="section-title">
+                Transaction History
+            </div>
+            <div class="filter-section">
+
+    <select id="monthFilter"></select>
+
+    <select id="typeFilter">
+
+        <option value="All">
+            All Types
+        </option>
+
+        <option value="Income">
+            Income
+        </option>
+
+        <option value="Expense">
+            Expense
+        </option>
+
+        <option value="Savings">
+            Savings
+        </option>
+
+    </select>
+
+</div>
+             <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="transactionTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/transactions.js"></script>
+
+</body>
+</html>

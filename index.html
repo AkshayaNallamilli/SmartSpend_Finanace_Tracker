@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartSpend Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            💰 SmartSpend
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="budget.html">
+                    <i class="fa-solid fa-calendar"></i>
+                    Monthly Budget
+                </a>
+            </li>
+
+            <li>
+                <a href="transactions.html">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    Transactions
+                </a>
+            </li>
+
+            <li>
+                <a href="savings.html">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                    Savings
+                </a>
+            </li>
+
+            <li>
+    <a href="emergency.html">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Emergency
+    </a>
+</li>
+
+            <li>
+                <a href="tips.html">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Tips
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <div>
+                <h1>Welcome Back 👋</h1>
+                <p>Your Financial Overview</p>
+            </div>
+
+            <div class="date-box">
+                <i class="fa-solid fa-calendar-days"></i>
+                <select id="monthFilter">
+    </select>
+            </div>
+
+        </div>
+
+        <!-- CARDS -->
+
+        <div class="cards">
+
+            <div class="card income">
+                <h3>Total Income</h3>
+                <h2 id="income">₹0</h2>
+            </div>
+
+            <div class="card expense">
+                <h3>Total Expense</h3>
+                <h2 id="expense">₹0</h2>
+            </div>
+
+            <div class="card savings">
+                <h3>Total Savings</h3>
+                <h2 id="savings">₹0</h2>
+            </div>
+
+            <div class="card balance">
+                <h3>Balance</h3>
+                <h2 id="balance">₹0</h2>
+            </div>
+
+        </div>
+
+        <!-- CHART SECTION -->
+
+        <div class="dashboard-grid">
+
+            <div class="chart-card">
+
+                <div class="section-title">
+                    Expense Overview
+                </div>
+
+                <canvas id="expenseChart"></canvas>
+
+            </div>
+
+            <div class="budget-summary">
+
+                <div class="section-title">
+                    Monthly Budget
+                </div>
+
+                <h2 id="budgetAmount">₹0</h2>
+
+                <p>Current Budget</p>
+
+                <div class="progress">
+                    <div class="progress-bar" id="budgetProgress"></div>
+                </div>
+
+                <h4 id="remainingBudget">
+                    Remaining ₹0
+                </h4>
+
+            </div>
+
+        </div>
+
+        <!-- TRANSACTIONS -->
+
+        <div class="table-card">
+
+            <div class="section-title">
+                Recent Transactions
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="recentTransactions">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
